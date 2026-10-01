@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRPO Course — информационный портал</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-dot"></span>
+        TRPO Course
+      </a>
+      <nav aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="#about">О курсе</a></li>
+          <li><a href="#tracks">Направления</a></li>
+          <li><a href="#schedule">Расписание</a></li>
+          <li><a href="#signup" class="nav-cta">Регистрация</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-content">
+            <p class="hero-badge">Практическая работа №1</p>
+            <h1>HTML и базовая CSS-разметка.<br>Семантическая структура страницы</h1>
+            <div class="hero-lines">
+              <span class="line line-dark"></span>
+              <span class="line line-gray"></span>
+              <span class="line line-light"></span>
+            </div>
+            <a href="#tracks" class="btn btn-primary">Начать обучение</a>
+          </div>
+          <div class="hero-decor" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- О КУРСЕ -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">О курсе</h2>
+        <p class="section-lead">
+          Учебный портал по технологиям разработки программного обеспечения.
+          Данные разделов формируются из <code>content.csv</code> и <code>navigation.json</code>.
+        </p>
+      </div>
+    </section>
+
+    <!-- НАПРАВЛЕНИЯ -->
+    <section id="tracks" class="section">
+      <div class="container">
+        <h2 class="section-title">Направления</h2>
+        <p class="section-lead">Шесть карточек по данным <code>content.csv</code>.</p>
+
+        <div class="cards">
+          <article class="card">
+            <p class="card-category">Основа</p>
+            <h3>HTML</h3>
+            <p class="card-desc">Структура и семантика документа</p>
+            <div class="card-progress"><span style="width:80%"></span></div>
+            <p class="card-value">Уровень: 8 / 10</p>
+          </article>
+
+          <article class="card">
+            <p class="card-category">Оформление</p>
+            <h3>CSS</h3>
+            <p class="card-desc">Стили и адаптивность</p>
+            <div class="card-progress"><span style="width:90%"></span></div>
+            <p class="card-value">Уровень: 9 / 10</p>
+          </article>
+
+          <article class="card">
+            <p class="card-category">Инструменты</p>
+            <h3>Git</h3>
+            <p class="card-desc">История изменений</p>
+            <div class="card-progress"><span style="width:70%"></span></div>
+            <p class="card-value">Уровень: 7 / 10</p>
+          </article>
+
+          <article class="card">
+            <p class="card-category">HTML</p>
+            <h3>Forms</h3>
+            <p class="card-desc">Пользовательский ввод</p>
+            <div class="card-progress"><span style="width:60%"></span></div>
+            <p class="card-value">Уровень: 6 / 10</p>
+          </article>
+
+          <article class="card">
+            <p class="card-category">Качество</p>
+            <h3>Accessibility</h3>
+            <p class="card-desc">Доступность интерфейса</p>
+            <div class="card-progress"><span style="width:100%"></span></div>
+            <p class="card-value">Уровень: 10 / 10</p>
+          </article>
+
+          <article class="card">
+            <p class="card-category">Проверка</p>
+            <h3>DevTools</h3>
+            <p class="card-desc">Исследование DOM и стилей</p>
+            <div class="card-progress"><span style="width:80%"></span></div>
+            <p class="card-value">Уровень: 8 / 10</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- РАСПИСАНИЕ -->
+    <section id="schedule" class="section">
+      <div class="container">
+        <h2 class="section-title">Расписание</h2>
+
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>ID</th><th>Тема</th><th>Категория</th><th>Описание</th><th>Баллы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>HTML</td><td>Основа</td><td>Структура и семантика документа</td><td>8</td></tr>
+            <tr><td>2</td><td>CSS</td><td>Оформление</td><td>Стили и адаптивность</td><td>9</td></tr>
+            <tr><td>3</td><td>Git</td><td>Инструменты</td><td>История изменений</td><td>7</td></tr>
+            <tr><td>4</td><td>Forms</td><td>HTML</td><td>Пользовательский ввод</td><td>6</td></tr>
+            <tr><td>5</td><td>Accessibility</td><td>Качество</td><td>Доступность интерфейса</td><td>10</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- РЕГИСТРАЦИЯ -->
+    <section id="signup" class="section">
+      <div class="container">
+        <h2 class="section-title">Регистрация</h2>
+
+        <form class="feedback-form" action="#" method="post" novalidate>
+          <div class="form-field">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="age">Возраст</label>
+            <input type="number" id="age" name="age" min="16" max="99" required>
+          </div>
+          <div class="form-field">
+            <label for="topic">Направление</label>
+            <select id="topic" name="topic" required>
+              <option value="">— выберите —</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="git">Git</option>
+              <option value="forms">Forms</option>
+              <option value="a11y">Accessibility</option>
+              <option value="devtools">DevTools</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Комментарий</label>
+            <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 TRPO Course. Кафедра индустриального программирования.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
