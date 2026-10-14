@@ -199,9 +199,6 @@ a:hover { text-decoration: underline; }
   outline: none;
 }
 
-.form-field select:focus {
-  border-color: #c0c309;
-}
 
 .feedback-form .btn { align-self: flex-start; }
 
