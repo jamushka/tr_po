@@ -184,31 +184,5 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const navList = document.querySelector('.nav-list');
-      if (!navList) return;
-
-      fetch('dataset/navigation.json')
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Navigation file not found');
-          }
-          return response.json();
-        })
-        .then((items) => {
-          navList.innerHTML = items
-            .map((item) => {
-              const isCta = item.label === 'Регистрация';
-              return `<li><a href="#${item.target}"${isCta ? ' class="nav-cta"' : ''}>${item.label}</a></li>`;
-            })
-            .join('');
-        })
-        .catch(() => {
-          // Оставляем текущую разметку навигации, если JSON недоступен.
-        });
-    });
-  </script>
-
 </body>
 </html>
