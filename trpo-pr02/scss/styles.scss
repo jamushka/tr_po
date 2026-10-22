@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'layout';
+@import 'components/badge';
+@import 'components/filters';
+@import 'components/card';
+
+.btn {
+  @include button;
+
+  &--small {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+  }
+
+  &--secondary {
+    background: $surface;
+    color: $accent;
+    border: 1px solid $accent;
+
+    &:hover {
+      background: rgba($accent, 0.08);
+    }
+  }
+}

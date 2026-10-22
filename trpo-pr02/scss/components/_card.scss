@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: $space;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    background: $background;
+  }
+
+  h3 {
+    margin: 0.25rem 0 0;
+    font-size: 1.125rem;
+  }
+}
+
+.meta {
+  margin: 0;
+  color: $muted;
+  font-size: 0.8125rem;
+}
+
+.price {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}

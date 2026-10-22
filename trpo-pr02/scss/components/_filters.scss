@@ -1,0 +1,54 @@
+.filters {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: $space;
+
+  h3 {
+    margin: 0 0 $space;
+    font-size: 1.125rem;
+  }
+}
+
+.filter-list {
+  display: grid;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  input {
+    accent-color: $accent;
+  }
+
+  &:focus-within {
+    outline: 2px solid $accent;
+    outline-offset: 3px;
+  }
+}
+
+.filter-note {
+  margin: 1rem 0 0;
+  color: $muted;
+  font-size: 0.8125rem;
+}

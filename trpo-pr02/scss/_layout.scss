@@ -1,0 +1,151 @@
+.site-header {
+  background: $surface;
+  border-bottom: 1px solid $border;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: $text;
+    font-weight: 500;
+  }
+}
+
+.hero {
+  padding: 2.5rem 0 0.5rem;
+}
+
+.hero-card {
+  position: relative;
+  background: $surface;
+  border-radius: 1.75rem;
+  padding: 3rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+    line-height: 1.15;
+  }
+}
+
+.hero-lead {
+  margin: 0 0 1.5rem;
+  color: $muted;
+}
+
+.section {
+  padding: 2.5rem 0;
+}
+
+.catalog-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.catalog-summary {
+  margin: 0;
+  color: $muted;
+  font-size: 0.95rem;
+}
+
+.catalog-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 240px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.catalog-layout:has(#filter-books:checked) .card:not([data-category="books"]),
+.catalog-layout:has(#filter-courses:checked) .card:not([data-category="courses"]),
+.catalog-layout:has(#filter-tools:checked) .card:not([data-category="tools"]) {
+  display: none;
+}
+
+.catalog-empty {
+  grid-column: 1 / -1;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: 2rem;
+  text-align: center;
+  color: $muted;
+}
+
+.site-footer {
+  margin-top: 2.5rem;
+  padding: 1.25rem 0;
+  background: $surface;
+  border-top: 1px solid $border;
+  color: $muted;
+  font-size: 0.875rem;
+}
+
+@media (max-width: $bp-lg) {
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: $bp-md) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hero-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+}
